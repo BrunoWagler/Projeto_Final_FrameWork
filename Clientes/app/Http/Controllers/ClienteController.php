@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Cliente;
+use Redirect;
 
 class ClienteController extends Controller
 {
@@ -21,7 +22,7 @@ class ClienteController extends Controller
      */
     public function create()
     {
-        //
+        return view('Cliente.create');
     }
 
     /**
@@ -29,7 +30,8 @@ class ClienteController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      Cliente::create($request->all());
+      return redirect(route('Cliente.index'));
     }
 
     /**
@@ -53,7 +55,7 @@ class ClienteController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+      
     }
 
     /**
@@ -61,6 +63,8 @@ class ClienteController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+       
+
+
     }
 }

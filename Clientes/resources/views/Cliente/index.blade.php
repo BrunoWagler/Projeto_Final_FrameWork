@@ -14,7 +14,10 @@
     <section class="container" id="topo">
         <div class="row">
 
-            <div class="col 12"></div>
+            <div class="col 12">
+
+            
+            </div>
 
 
         </div>
@@ -31,7 +34,8 @@
                 <a class="nav-link" href="#">Lista De Clientes</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Adicionar Cliente</a>
+                <a class="nav-link" href="{{ route('Cliente.create') }}">Adicionar Cliente</a>
+            </li>
 
         </ul>
     </section>
